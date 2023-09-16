@@ -6,7 +6,7 @@ form.onsubmit = (e) => {
     statusTxt.style.display = "block";
     statusTxt.innerText = "Sending your message...";
     form.classList.add("disabled");
-    let xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpsRequest();
     xhr.open("POST", "message.php", true);
     xhr.onload = () => {
         if (xhr.readyState == 4 && xhr.status == 200) {
@@ -20,7 +20,6 @@ form.onsubmit = (e) => {
                 }, 3000);
             }
             statusTxt.innerText = response;
-            form.classList.remove("disabled");
         }
     }
     let formData = new FormData(form);
