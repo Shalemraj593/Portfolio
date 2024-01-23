@@ -194,6 +194,11 @@ form .button-area {
     transform: scale(1.1);
 }
 
+#msg {
+   color: black; 
+        margin-top: 0px;
+    display: block;
+}
 
 @media (max-width: 600px) {
     .wrapper header {
